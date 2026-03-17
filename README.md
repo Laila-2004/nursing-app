@@ -4,6 +4,7 @@ Application en ligne de commande développée avec **Spring Boot**, permettant
 à des patients de réserver des infirmières à domicile et à des infirmières
 de gérer leur planning et leurs disponibilités.
 
+---
 
 ## ✨ Fonctionnalités
 
@@ -21,7 +22,7 @@ de gérer leur planning et leurs disponibilités.
 - Ajout / suppression de disponibilités (jour + plage horaire)
 - Modification du profil (nom, ville)
 
-
+---
 
 ## 🛠️ Stack technique
 
@@ -34,10 +35,10 @@ de gérer leur planning et leurs disponibilités.
 | Lombok | Réduction du code boilerplate |
 | Scanner | Interface console interactive |
 
-
+---
 
 ## 📁 Architecture
-
+```
 src/main/java/com/nursing/
 ├── entity/          → Modèles JPA (User, Disponibilite, Reservation)
 ├── repository/      → Interfaces Spring Data JPA
@@ -45,7 +46,9 @@ src/main/java/com/nursing/
 ├── menu/            → Interface console (MenuAuth, MenuPatient, MenuInfirmiere)
 ├── config/          → Initialisation des données mock
 └── NursingApplication.java
+```
 
+---
 
 ## ▶️ Lancer l'application
 
@@ -54,15 +57,16 @@ src/main/java/com/nursing/
 - Maven 3.6+
 
 ### Commandes
+```bash
 # Cloner le projet
 git clone https://github.com/Laila-2004/nursing-app.git
 cd nursing-app
 
 # Compiler et lancer
 mvn spring-boot:run
+```
 
-
-
+---
 
 ## 🔑 Comptes de démonstration
 
@@ -74,9 +78,10 @@ mvn spring-boot:run
 | Infirmière | sanaa@infirmiere.ma | 1234 |
 | Infirmière | khadija@infirmiere.ma | 1234 |
 
+---
 
 ## 🗄️ Modèle de données
-
+```
 User
  ├── id, nom, email, motDePasse, role (PATIENT | INFIRMIERE), ville
 
@@ -86,8 +91,9 @@ Disponibilite
 Reservation
  ├── id, patient (User), infirmiere (User), date, heure, motif
  └── statut : EN_ATTENTE | CONFIRMEE | REFUSEE
+```
 
+---
 
 ## 👨‍💻 Auteur
-
 LAILA MASSKOU.
